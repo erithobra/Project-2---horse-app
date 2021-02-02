@@ -14,6 +14,6 @@ const trainers = [
         username: 'trainer3',
         password: 'trainer3'
     }
-]
+];
 
 module.exports = trainers;
