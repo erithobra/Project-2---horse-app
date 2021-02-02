@@ -7,7 +7,15 @@
     <body>
         <h1><%=trainer.name%> Profile page</h1>
 
-        <!-- <a href="/horses/new">New</a> -->
-
+        <!-- <a href="/horses/new">New</a>below added by bil -->
+        <h3>Horses added by you:</h3>
+        <% for (let i=0; i< user.Horses.length; i++){ %>
+                <li>
+                   <a href="/horses/<%=trainers.horses[i].id%>"><%=user.horses[i].name%></a>
+                </li>
+                <br>
+        <% } %>
+    
+        <br><br>
     </body>
 </html>    
