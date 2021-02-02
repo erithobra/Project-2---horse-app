@@ -1,4 +1,4 @@
-const horses = require("../horses.js")
+const Horse = require("../models").Horse;
 
 // index route
 const index = (req, res) => {
@@ -17,17 +17,23 @@ const index = (req, res) => {
 //     })
 // }
 
-// // show route
-// const show = (req, res) => {
-//     res.render("show.ejs", {
-//         horse: horses[req.params.index]
-//     });
-// }
+// show route
+const show = (req, res) => {
+    Horse.findByPk(req.params.index)
+    .then(horse => {
+        res.render("show.ejs", {
+            horse: horse
+        });
+    })
+    // res.render("show.ejs", {
+    //     horse: horses[req.params.index]
+    // });
+};
 
 
 
 module.exports = {
     index,
     // renderNew,
-    // show,
+    show,
 }
