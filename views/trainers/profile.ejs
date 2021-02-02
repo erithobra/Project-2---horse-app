@@ -3,12 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="public/trainer.css" type="text/css">
+        <link rel="stylesheet" href="/trainer.css">
+
     </head>
     <body>
         <h1 class='Names'><%=`${trainer.first} ${trainer.last}'s`%> Profile page</h1>
-        <img src="<%=trainer.img%>">
+        
         <form action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
+             <img type= "image" src="<%=trainer.img%>">   
+            
             First Name: <input type="text" name="first" value=<%=trainer.first%> /><br> <br>
             Last Name: <input type="text" name="last" value=<%=trainer.last%> /><br> <br>
             address: <input type="text" name="address" value=<%=trainer.address%> /><br> <br>
@@ -20,6 +23,7 @@
             skill level: <input type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
             Username: <input type="text" name="username" value=<%=trainer.username%> /> <br> <br>
             Password: <input type="text" name="password" value=<%=trainer.password%> /><br> <br>
+            Add your Pic: <input type="file" name="img" id="img" class="input_text"/>
             <br /><br />
             <input type="submit" value="Edit Profile" />
         </form>
