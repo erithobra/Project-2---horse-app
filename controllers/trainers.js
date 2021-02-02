@@ -67,5 +67,6 @@ module.exports = {
     renderSignup,
     signup,
     editTrainer,
-    index
+    index,
+    deleteTrainer
 }
