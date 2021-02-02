@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         first:'Hanns',
-        last: 'Hankersteinster',
+        last: 'Hankersteiner',
         username: 'Lexy',
         password: 'joe',
         img:"https://i.imgur.com/dShEQw5.jpg",
@@ -49,11 +49,11 @@ module.exports = {
         skillLevel: 3,
       },
       {
-        first:'Bubba',
-        last: 'Cheeze',
+        first:'Kelly',
+        last: 'Tasch',
         username: 'johnny',
         password: 'joe',
-        img:"https://i.imgur.com/Bbwbtfe.png",
+        img:"https://i.imgur.com/Wx6Tsqy.jpg",
         address: '695 Chedder Dr',
         city: 'Stinky',
         state: "IN",

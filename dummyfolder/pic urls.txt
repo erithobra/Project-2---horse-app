@@ -93,3 +93,4 @@ footer {
     padding: 5px;    
     
 }
+Password: <input class="box" type="text" name="password" value=<%=trainer.password%> /><br> <br>

@@ -9,28 +9,28 @@
     <body>
         <h1><%=`${trainer.first} ${trainer.last}'s`%> Profile page</h1>
         
-        <form action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
+        <form class="inputForm" action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
              <img type= "image" src="<%=trainer.img%>">   
             
-            First Name: <input type="text" name="first" value=<%=trainer.first%> /><br> <br>
-            Last Name: <input type="text" name="last" value=<%=trainer.last%> /><br> <br>
-            address: <input type="text" name="address" value=<%=trainer.address%> /><br> <br>
-            city: <input type="text" name="city" value=<%=trainer.city%> /><br> <br>
-            state: <input type="text" name="state" value=<%=trainer.state%> /><br> <br>
-            zip: <input type="text" name="zip" value=<%=trainer.zip%> /><br> <br>
-            cell phone: <input type="text" name="cell" value=<%=trainer.cell%> /><br> <br>
-            age: <input type="text" name="age" value=<%=trainer.age%> /><br> <br>
-            skill level: <input type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
-            Username: <input type="text" name="username" value=<%=trainer.username%> /> <br> <br>
-            Password: <input type="text" name="password" value=<%=trainer.password%> /><br> <br>
-            Add your Pic: <input type="file" name="img" id="img" class="input_text"/>
+            First Name: <input class="box" type="text" name="first" value=<%=trainer.first%> /><br> <br>
+            Last Name: <input class="box" type="text" name="last" value=<%=trainer.last%> /><br> <br>
+            address: <input class="box" type="text" name="address" value=<%=trainer.address%> /><br> <br>
+            city: <input class="box" type="text" name="city" value=<%=trainer.city%> /><br> <br>
+            state: <input class="box" type="text" name="state" value=<%=trainer.state%> /><br> <br>
+            zip: <input class="box" type="text" name="zip" value=<%=trainer.zip%> /><br> <br>
+            cell phone: <input class="box" type="text" name="cell" value=<%=trainer.cell%> /><br> <br>
+            age: <input class="box" type="text" name="age" value=<%=trainer.age%> /><br> <br>
+            skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
+            Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
+            
             <br /><br />
             <input type="submit" value="Edit Profile" />
-        </form>
+       
 
 
-        <form action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete Trainer" />
+        <action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Trainer" /><br /><br />
+            Add your Pic: <input type="file" name="img" id="img" class="input_text"/>
         </form>
 
         <!-- <a href="/horses/new">New</a>below added by bil -->

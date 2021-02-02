@@ -7,17 +7,24 @@ h1 {
     font-size: 50px;
 }
 
-
-
 body {
     background-color: rgb(129, 19, 19);
     background-image: "https://i.imgur.com/csEhMwm.png";
     margin: 50px;
     padding: 50px;
-
+    height: auto;
     color: white;
     border: 5px solid rgb(90, 4, 4);
     
+}
+.inputForm {
+    color: white;
+    font-style:inherit;
+    float: left;
+ }
+.box {
+    float: right;
+
 }
 
 nav { text-align: center;
@@ -34,16 +41,12 @@ a:link {
     color: white;
 }
 
-
-
 h2 {
     height: 30px;
-    font-family:  Helvetica, sans-serif;
-       
+    font-family:  Helvetica, sans-serif;       
 }
 
-main {
-    
+main {    
     padding-bottom: 30px;
     border-bottom: 1px solid lightgrey;
     height: 400px;
