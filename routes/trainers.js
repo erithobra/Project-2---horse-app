@@ -4,6 +4,9 @@ const ctrl = require('../controllers');
 
 
 router.get('/', ctrl.trainers.index);
-router.get('/:index', ctrl.trainers.renderProfile);
+router.get('/profile/:index', ctrl.trainers.renderProfile);
+router.post('/login', ctrl.trainers.login);
+router.get('/login', ctrl.trainers.renderLogin);
+
 
 module.exports = router;
