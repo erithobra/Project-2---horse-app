@@ -42,10 +42,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       lastworm: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       lastshoe: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       createdAt: {
         allowNull: false,

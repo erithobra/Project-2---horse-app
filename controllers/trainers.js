@@ -54,9 +54,14 @@ const editTrainer = (req, res) => {
     .then(trainerProfile => {
         res.redirect(`/trainers/profile/${req.params.index}`)
     })
-    
-    
 }
+
+const deleteTrainer = (req, res) => {
+    Trainer.destroy({ where: {id: req.params.index} })
+    .then(() => {
+        res.redirect('/trainers/')
+    });
+};
 
 
 
@@ -67,5 +72,6 @@ module.exports = {
     renderSignup,
     signup,
     editTrainer,
-    index
+    index,
+    deleteTrainer
 }

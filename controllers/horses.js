@@ -25,15 +25,24 @@ const show = (req, res) => {
             horse: horse
         });
     })
-    // res.render("show.ejs", {
-    //     horse: horses[req.params.index]
-    // });
 };
 
+const editHorse = (req, res) => {
+
+    Horse.update(req.body, {
+        where: {id: req.params.index},
+        returning: true
+    })
+    .then(horse => {
+        res.redirect(`/horses/${req.params.index}`)
+    
+    })
+}
 
 
 module.exports = {
     index,
     // renderNew,
     show,
+    editHorse
 }
