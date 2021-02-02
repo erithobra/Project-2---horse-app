@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="/trainer.css" type="text/css">
+        <link rel="stylesheet" href="public/trainer.css" type="text/css">
     </head>
     <body>
-        <h1><%=`${trainer.first} ${trainer.last}'s`%> Profile page</h1>
-
+        <h1 class='Names'><%=`${trainer.first} ${trainer.last}'s`%> Profile page</h1>
+        <img src="<%=trainer.img%>">
         <form action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
             First Name: <input type="text" name="first" value=<%=trainer.first%> /><br> <br>
             Last Name: <input type="text" name="last" value=<%=trainer.last%> /><br> <br>
