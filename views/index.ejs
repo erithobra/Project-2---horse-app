@@ -7,6 +7,15 @@
     <body>
         <h1>Horses Index page</h1>
 
+        <ul>
+            <% for (let i = 0; i < horses.length; i ++) { %>
+                <li>
+                    <a href = "/horses/<%horses[i].id%>"><%=horses[i].name%></a>
+                </li>
+                <br/>
+        </ul>
+        <% } %>
+
         <a href="/horses/new">New</a>
 
     </body>

@@ -1,8 +1,9 @@
 {
   "development": {
-    "database": "horses_dev",
+    "database": "horse_dev",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorAliases": false
+ 
   }
 }

@@ -1,4 +1,4 @@
-const trainers = require("../models/trainers.js");
+const trainers = require("../dummyfolder/models/trainers.js");
 
 // index
 const index = (req, res) => {
