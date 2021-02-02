@@ -9,6 +9,7 @@ router.post('/login', ctrl.trainers.login);
 router.get('/login', ctrl.trainers.renderLogin);
 router.get('/signup', ctrl.trainers.renderSignup);
 router.post('/signup', ctrl.trainers.signup);
+router.put('/:index', ctrl.trainers.editTrainer);
 
 
 module.exports = router;

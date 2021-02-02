@@ -46,6 +46,18 @@ const renderProfile = (req, res) => {
     })
 }
 
+const editTrainer = (req, res) => {
+    Trainer.update(req.body, {
+        where: {id: req.params.index},
+        returning: true
+    })
+    .then(trainerProfile => {
+        res.redirect(`/trainers/profile/${req.params.index}`)
+    })
+    
+    
+}
+
 
 
 module.exports = {
@@ -54,5 +66,6 @@ module.exports = {
     renderLogin,
     renderSignup,
     signup,
+    editTrainer,
     index
 }
