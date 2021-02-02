@@ -2,13 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Create New Horse</title>
+        <link rel="stylesheet" href="/trainer.css" type="text/css">
     </head>
     <body>
         <h1>new Horse page</h1>
-        <form action="/horses" method="POST">
+        <form action="/horses/new" method="POST">
             Name: <input type="text" name="name" /><br/>
-            Color: <input type="text" name="color" /><br/>
+            breed: <input type="text" name="breed"/><br/>
+            color: <input type="text" name="color"/><br/>
             <input type="submit" name="" value="Create Horse"/>
         </form>
     </body>

@@ -11,11 +11,11 @@ const index = (req, res) => {
 };
 
 
-// // render new route
-// const renderNew = (req, res) => {
-//     res.render("new.ejs", {
-//     })
-// }
+// render new route
+const renderNew = (req, res) => {
+    res.render("new.ejs", {
+    })
+}
 
 // show route
 const show = (req, res) => {
@@ -39,10 +39,28 @@ const editHorse = (req, res) => {
     })
 }
 
+const deleteHorse = (req, res) => {
+    Horse.destroy({ where: {id: req.params.index} })
+    .then(() => {
+        res.redirect('/horses/')
+    });
+};
+
+const createHorse = (req, res) => {
+    Horse.create(req.body)
+    .then(newHorse => {
+        res.render(`show.ejs`, {
+            horse: newHorse
+        })
+    })
+};
 
 module.exports = {
     index,
-    // renderNew,
+    renderNew,
     show,
-    editHorse
+    editHorse,
+    deleteHorse,
+    createHorse
+
 }
