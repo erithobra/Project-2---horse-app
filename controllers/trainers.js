@@ -6,6 +6,7 @@ const index = (req, res) => {
     res.render("trainers/index.ejs")
 };
 
+// login
 const renderLogin = (req, res) => {
     res.render('trainers/login.ejs')
 }
@@ -22,20 +23,22 @@ const login = (req, res) => {
     })
 }
 
+// signup
+const renderSignup = (req, res) => {
+    res.render("trainers/signup.ejs")
+}
 
-
-
-
-
+const signup = (req, res) => {
+    Trainer.create(req.body)
+    .then(newTrainer => {
+        res.redirect(`/trainers/profile/${newTrainer.id}`);
+    })
+};
 
 // renderProfile
 const renderProfile = (req, res) => {
-    Trainer.findByPk(req.params.index, {
-        include: [{
-            model: Trainer,
-            attributes: ['name']
-        }] 
-    })
+    console.log("HERE IS A CONSOLE LOG")
+    Trainer.findByPk(req.params.index)
     .then(trainerProfile => {
         res.render('trainers/profile.ejs', {
             trainer: trainerProfile
@@ -49,5 +52,7 @@ module.exports = {
     renderProfile,
     login,
     renderLogin,
+    renderSignup,
+    signup,
     index
 }
