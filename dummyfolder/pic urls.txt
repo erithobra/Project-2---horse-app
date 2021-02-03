@@ -94,3 +94,5 @@ footer {
     
 }
 Password: <input class="box" type="text" name="password" value=<%=trainer.password%> /><br> <br>
+
+Add your Pic: <input type="file" name="img" id="img" class="input_text"/>
