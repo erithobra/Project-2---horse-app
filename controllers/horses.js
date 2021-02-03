@@ -34,8 +34,7 @@ const show = (req, res) => {
 };
 
 const editHorse = (req, res) => {
-    console.log(req.body.addOrRemove)
-    console.log(req.body.addOrRemove.value)
+
     if(req.body.addOrRemove == "add") { // if statement allows for adding or removing trainers from horses
     Horse.update(req.body, {
         where: {id: req.params.index},
@@ -50,7 +49,7 @@ const editHorse = (req, res) => {
             })
         })
     })
-} else { // if "add" was not selected, then other choice is remove, which triggers this loop to remove trainer
+    } else { // if "add" was not selected, then other choice is remove, which triggers this loop to remove trainer
     Horse.update(req.body, {
         where: {id: req.params.index},
         returning: true

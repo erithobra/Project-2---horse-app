@@ -53,22 +53,37 @@ const renderProfile = (req, res) => {
 
 
 const editTrainer = (req,res) => {
-    Trainer.update(req.body, { 
-        where: {id: req.params.index},
-        returning: true
-    })
-    .then((updateTrainer) => {
-        Horse.findByPk(req.body.horse).then((foundHorse) => {
-            Trainer.findByPk(req.params.index).then((foundTrainer) => {
-                foundTrainer.addHorse(foundHorse);
-                res.redirect(`/trainers/profile/${req.params.index}`)
-                res.redirect(`/trainers/profile/${req.params.index}`)
-            })
+
+    if(req.body.addOrRemove == "add") { // if statement allows for adding or removing trainers from horses
+        Trainer.update(req.body, { 
+            where: {id: req.params.index},
+            returning: true
         })
-    });
+        .then((updateTrainer) => {
+            Horse.findByPk(req.body.horse).then((foundHorse) => {
+                Trainer.findByPk(req.params.index).then((foundTrainer) => {
+                    foundTrainer.addHorse(foundHorse);
+                    res.redirect(`/trainers/profile/${req.params.index}`)
+                    res.redirect(`/trainers/profile/${req.params.index}`)
+                })
+            })
+        });
+    } else { // if "add" was not selected, then other choice is remove, which triggers this loop to remove trainer
+        Trainer.update(req.body, { 
+            where: {id: req.params.index},
+            returning: true
+        })
+        .then((updateTrainer) => {
+            Horse.findByPk(req.body.horse).then((foundHorse) => {
+                Trainer.findByPk(req.params.index).then((foundTrainer) => {
+                    foundTrainer.removeHorse(foundHorse);
+                    res.redirect(`/trainers/profile/${req.params.index}`)
+                    res.redirect(`/trainers/profile/${req.params.index}`)
+                })
+            })
+        });
+    }
 }
-
-
 const deleteTrainer = (req, res) => {
     Trainer.destroy({ where: {id: req.params.index} })
     .then(() => {
