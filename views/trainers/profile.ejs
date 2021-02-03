@@ -7,7 +7,8 @@
 
     </head>
     <body>
-        <h1><%=`${trainer.first} ${trainer.last}'s`%> Profile page</h1>
+        <h1>Trainer:    <%=`${trainer.first} ${trainer.last}'s`%></h1>
+        <h2>Horse Trainer Profile</h2>
         
         <form class="inputForm" action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
              <img type= "image" src="<%=trainer.img%>">   
@@ -22,6 +23,7 @@
             age: <input class="box" type="text" name="age" value=<%=trainer.age%> /><br> <br>
             skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
             Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
+            image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
             
             <br /><br />
             <input type="submit" value="Edit Profile" />
@@ -30,7 +32,7 @@
 
         <action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Trainer" /><br /><br />
-            Add your Pic: <input type="file" name="img" id="img" class="input_text"/>
+           
         </form>
 
         <!-- <a href="/horses/new">New</a>below added by bil -->
