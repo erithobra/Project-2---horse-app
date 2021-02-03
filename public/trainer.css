@@ -5,8 +5,17 @@ h1 {
     font-style: italic;
     height: 30px;
     font-size: 50px;
-    
-}
+            
+    }
+
+  h2 {
+
+    height: 30px;
+    margin-left: 20px;
+    color: white;    
+    font-family:  Helvetica, sans-serif;       
+}  
+
 
 body {
     background-color: rgb(129, 19, 19);
@@ -19,7 +28,6 @@ body {
 }
 
 img { 
-    float: right;
     margin-top: 10px;
     margin-left: 40px;
     margin-bottom: 60px;
@@ -75,12 +83,7 @@ a:hover {
     
 }
 
-h2 {
-    height: 30px;
-    margin-left: 20px;
-    color: white;    
-    font-family:  Helvetica, sans-serif;       
-}
+
 
 main {    
     padding-bottom: 30px;
@@ -92,3 +95,16 @@ main {
 
 
 
+@media only screen and
+ (max-width: 800px) {
+    h1 {
+        height: 20px;
+        font-size: 20px;
+    }
+
+    h2 {
+        height: 10px;
+        font-size: 10px;
+
+    }
+}
