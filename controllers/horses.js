@@ -1,4 +1,5 @@
 const Horse = require("../models").Horse;
+const Trainer = require("../models").Trainer;
 
 // index route
 const index = (req, res) => {
@@ -19,7 +20,9 @@ const renderNew = (req, res) => {
 
 // show route
 const show = (req, res) => {
-    Horse.findByPk(req.params.index)
+    Horse.findByPk(req.params.index, {
+        include : [Trainer]
+    })
     .then(horse => {
         res.render("show.ejs", {
             horse: horse

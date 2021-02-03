@@ -9,22 +9,22 @@
         <h1>Horses show page</h1>
         <h2><%= horse.name %></h2>
         
-        <form action="/horses/<%=horse.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'horse.id' -->
-            bname: <input type="text" name="bname" value=<%=horse.bname%> /><br> <br>
-            breed: <input type="text" name="breed" value=<%=horse.breed%> /><br> <br>
-            color: <input type="text" name="color" value=<%=horse.color%> /><br> <br>
-            age: <input type="text" name="age" value=<%=horse.age%> /><br> <br>
-            div: <input type="text" name="div" value=<%=horse.div%> /><br> <br>
-            gender: <input type="text" name="gender" value=<%=horse.gender%> /><br> <br>
-            height: <input type="text" name="height" value=<%=horse.height%> /><br> <br>
-            weight: <input type="text" name="weight" value=<%=horse.weight%> /><br> <br>
-            disp: <input type="text" name="disp" value=<%=horse.disp%> /><br> <br>
-            meds: <input type="text" name="meds" value=<%=horse.meds%> /> <br> <br>
-            lastworm: <input type="text" name="lastworm" value=<%=horse.lastworm%> /><br> <br>
-            lastshoe: <input type="text" name="lastshoe" value=<%=horse.lastshoe%> /><br> <br>
+        <form class="inputForm" action="/horses/<%=horse.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'horse.id' -->
+            bname: <input class = "box" type="text" name="bname" value=<%=horse.bname%> /><br> <br>
+            breed: <input class = "box" type="text" name="breed" value=<%=horse.breed%> /><br> <br>
+            color: <input class = "box" type="text" name="color" value=<%=horse.color%> /><br> <br>
+            age: <input class = "box" type="text" name="age" value=<%=horse.age%> /><br> <br>
+            div: <input class = "box" type="text" name="div" value=<%=horse.div%> /><br> <br>
+            gender: <input class = "box" type="text" name="gender" value=<%=horse.gender%> /><br> <br>
+            height: <input class = "box" type="text" name="height" value=<%=horse.height%> /><br> <br>
+            weight: <input class = "box" type="text" name="weight" value=<%=horse.weight%> /><br> <br>
+            disp: <input class = "box" type="text" name="disp" value=<%=horse.disp%> /><br> <br>
+            meds: <input class = "box" type="text" name="meds" value=<%=horse.meds%> /> <br> <br>
+            lastworm: <input class = "box" type="text" name="lastworm" value=<%=horse.lastworm%> /><br> <br>
+            lastshoe: <input class = "box" type="text" name="lastshoe" value=<%=horse.lastshoe%> /><br> <br>
             <br /><br />
             <input type="submit" value="Edit Profile" />
-        </form>
+        </form><br /><br />
 
         <form action="/horses/<%=horse.id%>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Horse" />
