@@ -24,11 +24,17 @@
             lastshoe: <input class = "box" type="text" name="lastshoe" value=<%=horse.lastshoe%> /><br> <br>
             <br /><br />
  
-            Add Trainer: <select name="trainer">
+            Add or Remove Trainer: <select name="addOrRemove">
+                <option value = "add">add</option>
+                <option value = "remove">remove</option>
+            </select><br />
+            
+            
+            Trainer name: <select name="trainer">
                 <% for (let i = 0; i < trainer.length; i++) { %> 
                     <option value = "<%= trainer[i].id %>"><%= trainer[i].first %></option>
                 <% } %>
-            </select>
+            </select><br />
 
             <input type="submit" value="Edit Profile" />
 
