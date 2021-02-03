@@ -17,7 +17,7 @@ module.exports = {
         meds: "none",
         lastworm: new Date(),
         lastshoe: new Date(),
-        trainerId: 1
+
       },
       {
         name:'Heartland Rare Treat',
@@ -33,7 +33,7 @@ module.exports = {
         meds: "thyroid",
         lastworm: new Date(),
         lastshoe: new Date(),
-        trainerId: 1
+
       },
       {
         name:'Poppy',
@@ -49,7 +49,7 @@ module.exports = {
         meds: "none",
         lastworm: new Date(),
         lastshoe: new Date(),
-        trainerId: 2
+
       },
       {
         name:'Phoenix',
@@ -65,7 +65,7 @@ module.exports = {
         meds: "none",
         lastworm: new Date(),
         lastshoe: new Date(),
-        trainerId: 3
+
       }
     ], {});
   },

@@ -15,7 +15,7 @@ module.exports = {
         zip: "30812",
         cell: "323-456-7894",
         age: 24,
-        trainerId: 1,
+
         skillLevel: 4,
       },
       {
@@ -30,7 +30,7 @@ module.exports = {
         zip: "70812",
         cell: "812-856-5894",
         age: 44,
-        trainerId: 2,
+
         skillLevel: 2,
       },
       {
@@ -45,7 +45,7 @@ module.exports = {
         zip: "10812",
         cell: "541-856-5894",
         age: 54,
-        trainerId: 3,
+
         skillLevel: 3,
       },
       {
@@ -60,7 +60,7 @@ module.exports = {
         zip: "70812",
         cell: "951-885-7894",
         age: 51,
-        trainerId: 4,
+
         skillLevel: 2,
       }
     ], {});

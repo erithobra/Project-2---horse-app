@@ -18,15 +18,18 @@ const renderNew = (req, res) => {
     })
 }
 
-// show route
 const show = (req, res) => {
     Horse.findByPk(req.params.index, {
         include : [Trainer]
     })
     .then(horse => {
-        res.render("show.ejs", {
-            horse: horse
-        });
+        Trainer.findAll()
+        .then(allTrainers => {
+            res.render("show.ejs", {
+                horse: horse,
+                trainer: allTrainers
+            })
+        })
     })
 };
 
@@ -36,9 +39,13 @@ const editHorse = (req, res) => {
         where: {id: req.params.index},
         returning: true
     })
-    .then(horse => {
-        res.redirect(`/horses/${req.params.index}`)
-    
+    .then(Updatehorse => {
+        Trainer.findByPk(req.body.trainer).then((foundTrainer) => {
+            Horse.findByPk(req.params.index).then((foundHorse) => {
+                foundHorse.addTrainer(foundTrainer);
+                res.redirect(`/horses/${req.params.index}`)
+            })
+        })
     })
 }
 

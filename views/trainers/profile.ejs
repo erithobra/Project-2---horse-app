@@ -26,6 +26,15 @@
             image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
             
             <br /><br />
+            
+            Add Horse: <select name = "horse">
+                <% for (let i = 0; i < horse.length; i++) { %> 
+                    <option value = "<%= horse[i].id %>"><%= horse[i].name %></option>
+                <% } %>
+            </select>
+
+            <br /><br />
+
             <input type="submit" value="Edit Profile" />
        
 
@@ -37,7 +46,11 @@
 
         <!-- <a href="/horses/new">New</a>below added by bil -->
         <h3>Horses added by you:</h3>
-
+        <% for (let i = 0; i<trainer.Horses.length; i++) { %>
+            <li>
+                <%= trainer.Horses[i].name %>
+            </li>
+        <% } %>
     
         <br><br>
         <a href="/horses"> View all Horses</a>

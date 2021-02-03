@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Horse.belongsTo(models.Trainer, { foreignKey: "trainerId" });
+      Horse.belongsToMany(models.Trainer, { 
+        through: "TrainerHorse",
+        foreignKey: "horseId",
+        otherKey: "trainerId"
+       });
     }
   };
   Horse.init({
@@ -27,7 +31,6 @@ module.exports = (sequelize, DataTypes) => {
     meds: DataTypes.STRING,
     lastworm: DataTypes.DATE,
     lastshoe: DataTypes.DATE,
-    trainerId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Horse',
