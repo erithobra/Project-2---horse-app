@@ -9,9 +9,9 @@
     <body>
         <h1>Trainer:    <%=`${trainer.first} ${trainer.last}'s`%></h1>
         <h2>Horse Trainer Profile</h2>
-        
+        <img type= "image" src="<%=trainer.img%>">  
         <form class="inputForm" action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
-             <img type= "image" src="<%=trainer.img%>">   
+              
             
             First Name: <input class="box" type="text" name="first" value=<%=trainer.first%> /><br> <br>
             Last Name: <input class="box" type="text" name="last" value=<%=trainer.last%> /><br> <br>
@@ -24,24 +24,16 @@
             skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
             Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
             image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
-            
-            <br /><br />
-            
-            Add Horse: <select name = "horse">
+        <br /><br />
+        Add Horse: <select name = "horse">
                 <% for (let i = 0; i < horse.length; i++) { %> 
                     <option value = "<%= horse[i].id %>"><%= horse[i].name %></option>
                 <% } %>
             </select>
-
-            <br /><br />
-
+        <br /><br />
             <input type="submit" value="Edit Profile" />
-       
-
-
         <action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Trainer" /><br /><br />
-           
         </form>
 
         <!-- <a href="/horses/new">New</a>below added by bil -->
