@@ -44,6 +44,7 @@ const editHorse = (req, res) => {
             Horse.findByPk(req.params.index).then((foundHorse) => {
                 foundHorse.addTrainer(foundTrainer);
                 res.redirect(`/horses/${req.params.index}`)
+                res.redirect(`/horses/${req.params.index}`)
             })
         })
     })

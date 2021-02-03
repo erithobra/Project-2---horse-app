@@ -50,24 +50,7 @@ const renderProfile = (req, res) => {
         })
     })
 }
-// const renderProfile = (req, res) => {
-//     Trainer.findByPk(req.params.index)
-//     .then(trainerProfile => {
-//         res.render('trainers/profile.ejs', {
-//             trainer: trainerProfile
-//         })
-//     })
-// }
 
-// const editTrainer = (req, res) => {
-//     Trainer.update(req.body, {
-//         where: {id: req.params.index},
-//         returning: true
-//     })
-//     .then(trainerProfile => {
-//         res.redirect(`/trainers/profile/${req.params.index}`)
-//     })
-// }
 
 const editTrainer = (req,res) => {
     Trainer.update(req.body, { 
@@ -79,10 +62,13 @@ const editTrainer = (req,res) => {
             Trainer.findByPk(req.params.index).then((foundTrainer) => {
                 foundTrainer.addHorse(foundHorse);
                 res.redirect(`/trainers/profile/${req.params.index}`)
+                res.redirect(`/trainers/profile/${req.params.index}`)
             })
         })
     });
 }
+
+
 const deleteTrainer = (req, res) => {
     Trainer.destroy({ where: {id: req.params.index} })
     .then(() => {
