@@ -25,8 +25,7 @@
                 age: <input class="box" type="text" name="age" value=<%=trainer.age%> /><br> <br>
                 skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
                 Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
-                image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
-                <br /><br />
+                image link: <input class="box" type="text"name="img" value=<%=trainer.img%> /> <br /><br />
                 Add or Remove Horse: 
                 <select class="box" name="addOrRemove">
                     <option value = "add">add</option>
@@ -38,12 +37,10 @@
                     <% for (let i = 0; i < horse.length; i++) { %> 
                         <option value = "<%= horse[i].id %>"><%= horse[i].name %></option>
                     <% } %>
-                </select>
-                <br /><br />
-                <input class="box" type="submit" value="Edit Profile" />
+                </select><br /><br />
+                <input type="submit" value="Edit Profile" />
             </form>
-            </br>
-            <div class = "inputForm">
+            <section class="inputForm">
                 <h3>Horses added by you:</h3>
                 <br />
                 <% for (let i = 0; i<trainer.Horses.length; i++) { %>
@@ -53,11 +50,11 @@
                 <% } %>
                 <br />
                 <a href="/horses"> View all Horses</a>
-                <br />
-                <form id="deleteTrainer" action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
+                <br /><br />
+                <form action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
                     <input type="submit" clas = "box" value="Delete Trainer" />
                 </form>
-            </div>
+            </section>
         </container>
     </body>
 </html>    

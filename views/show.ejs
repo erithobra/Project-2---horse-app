@@ -24,38 +24,32 @@
             meds: <input class = "box" type="text" name="meds" value=<%=horse.meds%> /> <br> <br>
             lastworm: <input class = "box" type="text" name="lastworm" value=<%=horse.lastworm%> /><br> <br>
             lastshoe: <input class = "box" type="text" name="lastshoe" value=<%=horse.lastshoe%> /><br> <br>
-            <br /><br />
- 
-            Add or Remove Trainer: <select name="addOrRemove">
+
+            Add or Remove Trainer: 
+            <select class="box" name="addOrRemove">
                 <option value = "add">add</option>
                 <option value = "remove">remove</option>
-            </select><br />
+            </select><br /><br />
             
-            
-            Trainer name: <select name="trainer">
+            Trainer name: 
+            <select class="box" name="trainer">
                 <% for (let i = 0; i < trainer.length; i++) { %> 
                     <option value = "<%= trainer[i].id %>"><%= trainer[i].first %></option>
                 <% } %>
-            </select><br />
-
+            </select><br /><br />
             <input type="submit" value="Edit Profile" />
+        </form>
+        <section class = "inputForm">
+            <h3><%= horse.name %> has the following trainers: </h3><br /><br />
+                <% for (let i = 0; i < horse.Trainers.length; i ++) { %>
+                    <li> <%= horse.Trainers[i].first %> <%= horse.Trainers[i].last %></li><br />
+                <% } %>
 
-        </form><br /><br />
-
-        <form action="/horses/<%=horse.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete Horse" />
-        </form><br/><br/>
-
-
-        <%= horse.name %> has the following trainers: <br />
-
-        <ul>
-            <% for (let i = 0; i < horse.Trainers.length; i ++) { %>
-                <li> <%= horse.Trainers[i].first %> <%= horse.Trainers[i].last %></li><br />
-            <% } %>
-        </ul>
-
-        <a href="/horses/">Return to Horse index</a>
-
+            <a href="/horses/">Return to Horse index</a>
+            <br /><br />
+            <form action="/horses/<%=horse.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Horse" />
+            </form>
+        </section>
     </body>
 </html>    

@@ -5,14 +5,12 @@ h1 {
     text-align: center;
     color: white;
     font-style: italic;
-    height: 30px;
     font-size: 50px;
 }
 
 h2 {
     text-align: center;
-    margin: auto;
-    height: 30px;
+    margin: auto auto 10px auto;
     color: white;    
     font-family:  Helvetica, sans-serif;
     max-width:fit-content;       
@@ -32,7 +30,6 @@ div {
 
 body {
     background-color: rgb(129, 19, 19);
-    background-image: "https://i.imgur.com/csEhMwm.png";
     color: white;
 }
 
@@ -51,7 +48,7 @@ img {
 .inputForm {
     color: white;
     font-style:inherit;
-    float: Left;  
+    /* float: left;   */
     margin: 10px;
     padding: 10px;
     border: 5px solid rgb(90, 4, 4);
@@ -128,12 +125,16 @@ ul {
     
     div {
         float: none;
-        margin: auto;
+        margin: 10px auto 10px auto;
+        padding: 10px;
+        height: fit-content;
     }
 
     .inputForm {
-        margin: auto;
+        margin: 10px auto 10px auto;
+        padding: 10px;
         float: none;
-        max-width: 400px;
+        width: 400px;
+        height: fit-content;
     }
 }
