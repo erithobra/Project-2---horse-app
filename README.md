@@ -1,5 +1,8 @@
 # Project-2
 ## Horse Trainer App
+
+Link to git repository: ![git repository for app](https://github.com/erithobra/horse-app)
+
 ---
 #### Motivation:
 Develop an application for Horse Farms to help manage the business.  Include features to track horses and trainers also the horses they train.  Include a centralized database, sign-in, login security.
@@ -25,7 +28,7 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 ---
 #### Wireframe
 
-###### page layout and website flow
+##### Page Layout and Website Flow
 
  * app flow
 
@@ -51,7 +54,7 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 
     ![horse info](https://i.imgur.com/iWoNxVb.png)
 
-###### relationship mapping
+##### Relationship Mapping
 
  * ![join table picture](https://i.imgur.com/3vGNkxR.png)
 
