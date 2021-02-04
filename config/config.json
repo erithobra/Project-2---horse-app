@@ -1,9 +1,6 @@
 {
   "production": {
     "use_env_variable": "DATABASE_URL",
-    "ssl": {
-    "require": true,
-    "rejectUnauthorized": false
-    }
+    "dialectOptions": { "ssl": true }
   }
 }
