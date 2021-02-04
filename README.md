@@ -6,21 +6,21 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 
 ---
 #### Objective Level 1 (MVP) (complete):
-* Create trainer profiles and horse info pages.
-* Allow for editing of information on trainer and horse pages.
-* Allow for deletion of both trainer and horse pages.
-* Create a relationship between trainer and horse pages.
+[-] # '[-]' Create trainer profiles and horse info pages.
+- [X] Allow for editing of information on trainer and horse pages.
+- [x] Allow for deletion of both trainer and horse pages.
+- [x] Create a relationship between trainer and horse pages.
 
 #### Objective Level 2 (partially complete):
-* Incorporate task table with various tasks for each horse.
-* Have scheduled and prioritized events within the task table.
-* Simple styling.
+* [ ] Incorporate task table with various tasks for each horse.
+* [ ] Have scheduled and prioritized events within the task table.
+* [x] Simple styling.
 
-#### Objective Level 3 (incomplete):
-* Password encryption and authorization.
-* Data validation.
-* Improved styling.
-* Mobile responsive.
+#### Objective Level 3 (partially complete):
+* [ ] Password encryption and authorization.
+* [ ] Data validation.
+* [x] Improved styling.
+* [x] Mobile responsive.
 
 ---
 #### Technology used:
