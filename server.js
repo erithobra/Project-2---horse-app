@@ -13,6 +13,9 @@ app.use(express.static("public"));
 app.use("/horses", routes.horses);
 app.use("/trainers", routes.trainers);
 
+app.get('/', (req,res) => { 
+    res.render('trainers/index.ejs');
+})
 
 
 app.listen(process.env.PORT || 3000, () => {
