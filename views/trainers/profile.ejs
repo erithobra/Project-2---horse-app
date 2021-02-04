@@ -13,45 +13,51 @@
             <h2>Trainer: <%=`${trainer.first} ${trainer.last}`%></h2>
             <img type= "image" src="<%=trainer.img%>"> 
         </div>
-        
-        <form class="inputForm" action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
-            First Name: <input class="box" type="text" name="first" value=<%=trainer.first%> /><br> <br>
-            Last Name: <input class="box" type="text" name="last" value=<%=trainer.last%> /><br> <br>
-            address: <input class="box" type="text" name="address" value=<%=trainer.address%> /><br> <br>
-            city: <input class="box" type="text" name="city" value=<%=trainer.city%> /><br> <br>
-            state: <input class="box" type="text" name="state" value=<%=trainer.state%> /><br> <br>
-            zip: <input class="box" type="text" name="zip" value=<%=trainer.zip%> /><br> <br>
-            cell phone: <input class="box" type="text" name="cell" value=<%=trainer.cell%> /><br> <br>
-            age: <input class="box" type="text" name="age" value=<%=trainer.age%> /><br> <br>
-            skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
-            Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
-            image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
-            <br /><br />
-            Add or Remove Horse: <select name="addOrRemove">
-                <option value = "add">add</option>
-                <option value = "remove">remove</option>
-            </select>
-            <br />
-            Horse name: <select name = "horse">
-                <% for (let i = 0; i < horse.length; i++) { %> 
-                    <option value = "<%= horse[i].id %>"><%= horse[i].name %></option>
+        <container>
+            <form class="inputForm" action="/trainers/<%=trainer.id%>?_method=PUT" method="POST"> <!-- changed from 'index' to 'trainer.id' -->
+                First Name: <input class="box" type="text" name="first" value=<%=trainer.first%> /><br> <br>
+                Last Name: <input class="box" type="text" name="last" value=<%=trainer.last%> /><br> <br>
+                address: <input class="box" type="text" name="address" value=<%=trainer.address%> /><br> <br>
+                city: <input class="box" type="text" name="city" value=<%=trainer.city%> /><br> <br>
+                state: <input class="box" type="text" name="state" value=<%=trainer.state%> /><br> <br>
+                zip: <input class="box" type="text" name="zip" value=<%=trainer.zip%> /><br> <br>
+                cell phone: <input class="box" type="text" name="cell" value=<%=trainer.cell%> /><br> <br>
+                age: <input class="box" type="text" name="age" value=<%=trainer.age%> /><br> <br>
+                skill level: <input class="box" type="text" name="skillLevel" value=<%=trainer.skillLevel%> /><br> <br>
+                Username: <input class="box" type="text" name="username" value=<%=trainer.username%> /> <br> <br>
+                image link: <input class="box" type="text"name="img" value=<%=trainer.img%> />
+                <br /><br />
+                Add or Remove Horse: 
+                <select class="box" name="addOrRemove">
+                    <option value = "add">add</option>
+                    <option value = "remove">remove</option>
+                </select>
+                <br /><br />
+                Horse name: 
+                <select class = "box" name = "horse">
+                    <% for (let i = 0; i < horse.length; i++) { %> 
+                        <option value = "<%= horse[i].id %>"><%= horse[i].name %></option>
+                    <% } %>
+                </select>
+                <br /><br />
+                <input class="box" type="submit" value="Edit Profile" />
+            </form>
+            </br>
+            <div class = "inputForm">
+                <h3>Horses added by you:</h3>
+                <br />
+                <% for (let i = 0; i<trainer.Horses.length; i++) { %>
+                    <li>
+                        <%= trainer.Horses[i].name %>
+                    </li>
                 <% } %>
-            </select>
-            <br /><br />
-            <input class="box" type="submit" value="Edit Profile" />
-        </form>
-        <form action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
-            <input type="submit" clas = "box" value="Delete Trainer" /><br /><br />
-        </form>
-
-        <h3>Horses added by you:</h3>
-        <% for (let i = 0; i<trainer.Horses.length; i++) { %>
-            <li>
-                <%= trainer.Horses[i].name %>
-            </li>
-        <% } %>
-    
-        <br><br>
-        <a href="/horses"> View all Horses</a>
+                <br />
+                <a href="/horses"> View all Horses</a>
+                <br />
+                <form id="deleteTrainer" action="/trainers/<%=trainer.id%>?_method=DELETE" method="POST">
+                    <input type="submit" clas = "box" value="Delete Trainer" />
+                </form>
+            </div>
+        </container>
     </body>
 </html>    

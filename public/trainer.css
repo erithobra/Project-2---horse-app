@@ -16,19 +16,23 @@ h2 {
     color: white;    
     font-family:  Helvetica, sans-serif;
     max-width:fit-content;       
-}  
+}
+
+h3 {
+    margin: 0;
+}
 
 div {
     float: right;
     width: 50%;
     margin: 10px;
+    height: fit-content;
+    padding: 5px;
 }
 
 body {
     background-color: rgb(129, 19, 19);
     background-image: "https://i.imgur.com/csEhMwm.png";
-    margin: 20px;
-    padding: 40px;
     color: white;
 }
 
@@ -41,7 +45,6 @@ img {
     color: white;
     border: 10px solid lightgrey;
     font-family: Arial, Helvetica, sans-serif;
-    /* justify-self: center; */
     display: block;
 }
 
@@ -53,7 +56,7 @@ img {
     padding: 10px;
     border: 5px solid rgb(90, 4, 4);
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
+    width: 400px;
 }
 
 .box {
@@ -76,14 +79,14 @@ nav {
 }
 
 a:link {
-    color: gray;
+    color: lightgray;
     padding: 5px;
     margin: 0;
     padding: 0;
 }
 
 a:visited {
-    color: gray;
+    color: lightgray;
     
 }
 a:hover {
@@ -107,6 +110,9 @@ ul {
     border: 10px solid lightgrey;
 } */
 
+#deleteTrainer {
+    float: right;
+}
 @media only screen and (max-width: 1060px) {
     h1 {
         height: 20px;
