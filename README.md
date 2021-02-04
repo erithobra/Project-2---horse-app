@@ -1,6 +1,10 @@
 # Project-2
 ## Horse Trainer App
 
+
+[Link to Horse Trainer App](https://horse-trainer-app.herokuapp.com/)
+
+
 [Link to git repository](https://github.com/erithobra/horse-app)
 
 ---
