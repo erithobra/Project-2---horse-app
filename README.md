@@ -1,7 +1,7 @@
 # Project-2
 ## Horse Trainer App
 
-Link to git repository: ![git repository for app](https://github.com/erithobra/horse-app)
+[Link to git repository](https://github.com/erithobra/horse-app)
 
 ---
 #### Motivation:
