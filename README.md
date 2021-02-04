@@ -6,8 +6,8 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 
 ---
 #### Objective Level 1 (MVP) (complete):
-[-] # '[-]' Create trainer profiles and horse info pages.
-- [X] Allow for editing of information on trainer and horse pages.
+- [x] Create trainer profiles and horse info pages.
+- [x] Allow for editing of information on trainer and horse pages.
 - [x] Allow for deletion of both trainer and horse pages.
 - [x] Create a relationship between trainer and horse pages.
 
@@ -23,6 +23,42 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 * [x] Mobile responsive.
 
 ---
+#### Wireframe
+
+###### page layout and website flow
+
+ * app flow
+
+    ![app flow](https://i.imgur.com/bPBFk3n.png)
+
+ * welcome page
+
+    ![welcome page](https://i.imgur.com/iPtoXth.png)
+
+ * trainer sign-in
+
+    ![trainer sign in](https://i.imgur.com/lGTRS4l.png)
+
+ * trainer log-in
+
+    ![trainer log in](https://i.imgur.com/hcaQf4W.png)
+
+ * trainer profile
+
+    ![trainer profile](https://i.imgur.com/F1R2JaZ.png)
+
+ * horse info
+
+    ![horse info](https://i.imgur.com/iWoNxVb.png)
+
+###### relationship mapping
+
+ * ![join table picture](https://i.imgur.com/3vGNkxR.png)
+
+ * ![relationship diagram](https://i.imgur.com/25CEDuD.png)
+
+---
+
 #### Technology used:
 * HTML, CSS, JavaScript
 * Node.js
@@ -32,16 +68,35 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 * github - used for revision control
 * Heroku - used for deployment.
 
+---
+
 #### Main features:
 * List of features
  * user profile functionality (username and password)
- * 2 CRUD models (horses and trainers)
+ * two CRUD models (horses and trainers)
  * editable text fields
  * predefined inputs (dropdown fields)
 
+---
 
-* Database relations
-  * put a diagram here
+#### Code snippet:
+This allows for the addition or the removal of horses/trainers:
+```
+if(req.body.addOrRemove == "add") {
+    Trainer.update(req.body, {
+        where: {id: req.params.index},
+        returning: true
+    })
+```
+.....
+```
+else {
+  Trainer.update(req.body, {
+    where: {id: req.params.index},
+    returning: true
+```
+
+---
 
 #### User stories:
 * As a Horse Farm Manager, I want to know who is training which horse.
@@ -59,6 +114,8 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 * Anyone associated with this Farm would like to see pictures of the horses and
  their Trainers.
 * As a Farm Manager I would like to be able to maintain a current list of horses and trainers on the farm.
+
+---
 
 #### Room for improvement:
 1. Add a task list for each trainer with priority value.

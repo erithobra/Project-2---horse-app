@@ -61,11 +61,11 @@ img {
 }
 
 input:hover {
-    background-color:rgb(181, 224, 64)
+    background-color: lightgray;
 }
 
 input:focus {
-    background-color: yellow;
+    background-color: white;
 }
 
 nav { 
@@ -87,7 +87,7 @@ a:visited {
     
 }
 a:hover {
-    color: red;
+    color: white;
 }
   
 .active:link {
