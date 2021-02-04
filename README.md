@@ -60,9 +60,13 @@ Develop an application for Horse Farms to help manage the business.  Include fea
 
 ##### Relationship Mapping
 
- * ![join table picture](https://i.imgur.com/3vGNkxR.png)
+ * Horses and Trainers tables are joined by TrainerHorses.
 
- * ![relationship diagram](https://i.imgur.com/25CEDuD.png)
+    ![join table picture](https://i.imgur.com/3vGNkxR.png)
+
+ * Horses and Trainers have a many-to-many relationship.
+    
+    ![relationship diagram](https://i.imgur.com/25CEDuD.png)
 
 ---
 
