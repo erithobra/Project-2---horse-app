@@ -76,9 +76,8 @@ const deleteHorse = (req, res) => {
 const createHorse = (req, res) => {
     Horse.create(req.body)
     .then(newHorse => {
-        res.render(`show.ejs`, {
-            horse: newHorse
-        })
+        res.redirect(`/horses/${newHorse.id}`)
+        
     })
 };
 
